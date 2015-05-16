@@ -12,4 +12,4 @@ spec = do
       length' [1, 2, 7, 4, 34] `shouldBe` 5
 
     it "Calculates the length of a string" $ do
-      length' "Olya Piatrova" `shouldBe` 7
+      length' "Olya Piatrova" `shouldBe` 13
