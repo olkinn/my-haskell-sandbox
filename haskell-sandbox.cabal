@@ -51,7 +51,11 @@ cabal-version:       >=1.10
 
 library
   -- Modules exported by the library.
-  -- exposed-modules:     
+  exposed-modules:
+     Sandbox.Folds
+     Sandbox.Recursion
+     Sandbox.Misc
+     Sandbox.DataStructures.Tree
   
   -- Modules included in this library but not exported.
   -- other-modules:       
