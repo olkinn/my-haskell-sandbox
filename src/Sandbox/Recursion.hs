@@ -1,4 +1,5 @@
 module Sandbox.Recursion (length')  where
 
-length' :: [x] -> Int
-length' xs = 5
+length' :: (Num b) => [a] -> b
+length' [] = 0
+length' (_:xs) = 1 + length' xs
