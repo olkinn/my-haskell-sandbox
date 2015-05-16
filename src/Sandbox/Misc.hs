@@ -1,16 +1,11 @@
 module Sandbox.Misc (matrixMaxMin)  where
 
 matrixMaxMin :: [[Int]] -> Int
-matrixMaxMin matrix = maxOfMin (listValues matrix)
+matrixMaxMin matrix = max (listValues matrix)
 
 matrixMin :: (Ord a)=> [a] -> a
 matrixMin [] = error "min called on an empty list"
-matrixMin (a:as) = foldr (\x y -> if x < y then x else y) a as 
+matrixMin  = foldr1 (\x y -> if x < y then x else y)
 
 listValues :: [[Int]] -> [Int]
 listValues =  map matrixMin
-
-maxOfMin :: (Ord a) => [a] -> a
-maxOfMin [] = error "called on an empty list"
-maxOfMin (a:as) = foldr (\x y -> if x > y then x else y) a as
-
