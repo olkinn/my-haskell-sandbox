@@ -13,5 +13,10 @@ spec = do
 
   describe "last'" $ do
 
-	it "returns the last element of a list" $ do
+	it "Returns the last element of a list" $ do
 		last' [4,5,3,8] `shouldBe` 8
+
+  describe "length'" $ do
+
+  	it "Returns the length of a list" $ do
+  		length' [1,2,3,4] `shouldBe` 4
