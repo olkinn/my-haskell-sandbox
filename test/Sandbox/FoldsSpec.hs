@@ -2,6 +2,7 @@ module Sandbox.FoldsSpec (spec) where
 
 import Test.Hspec
 import Sandbox.Folds
+import Data.Char
 
 spec :: Spec
 spec = do
@@ -20,3 +21,8 @@ spec = do
 
   	it "Returns the length of a list" $ do
   		length' [1,2,3,4] `shouldBe` 4
+
+  describe "map'" $ do
+
+  	it "Applies a function to every element of the list" $ do
+  		map' toUpper "hello world" `shouldBe` "HELLO WORLD"
