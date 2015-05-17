@@ -36,3 +36,13 @@ spec = do
 
   	it "Returns a list of elements in reversed order" $ do
   		reverse' [1,2,3,4,5] `shouldBe` [5,4,3,2,1]
+
+  describe "elem'" $ do
+
+  	it "Returns True if the element in contained in the 2nd argument and False otherwise" $ do
+  		elem' 'a' "Hello World" `shouldBe` False
+
+  describe "take'" $ do
+
+  	it "Returns the n first elements of a list" $ do
+  		take' 4 "Hello World" `shouldBe` "Hell"
