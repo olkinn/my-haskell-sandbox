@@ -1,4 +1,4 @@
-module Sandbox.Folds (sum', last', length', map')  where
+module Sandbox.Folds (sum', last', length', map', filter', reverse')  where
 
 import Data.Char
 
@@ -13,3 +13,9 @@ length' = foldl (\acc x -> acc + 1) 0
 
 map' :: (a -> b) -> [a] -> [b]
 map' f = foldr (\x acc -> f x : acc) [] 
+
+filter' :: (a -> Bool) -> [a] -> [a]
+filter' f = foldr (\x acc -> if (f x == True) then x : acc else acc) []
+
+reverse' :: [a] -> [a]
+reverse' = foldl (\x acc -> acc : x) []

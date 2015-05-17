@@ -26,3 +26,13 @@ spec = do
 
   	it "Applies a function to every element of the list" $ do
   		map' toUpper "hello world" `shouldBe` "HELLO WORLD"
+
+  describe "filter'" $ do
+
+  	it "Returns a list of elements that satisfy the function" $ do
+  		filter' isUpper "HellO WorlD" `shouldBe` "HOWD"
+
+  describe "reverse'" $ do
+
+  	it "Returns a list of elements in reversed order" $ do
+  		reverse' [1,2,3,4,5] `shouldBe` [5,4,3,2,1]
